@@ -1,0 +1,17 @@
+{
+	"name": "Create External Tables",
+	"properties": {
+		"content": {
+			"query": "CREATE EXTERNAL TABLE gold.ext_sales\nWITH\n(\n    LOCATION = 'extsales',\n    DATA_SOURCE = source_gold,\n    FILE_FORMAT = parquet\n) AS \nselect *\nfrom gold.sales \n\nselect * from gold.ext_sales\n\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "adwrs_db",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

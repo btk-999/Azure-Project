@@ -1,0 +1,17 @@
+{
+	"name": "Admin Actions",
+	"properties": {
+		"content": {
+			"query": "CREATE MASTER KEY ENCRYPTION BY PASSWORD ='#Bhargav9949109157'\n\nCREATE DATABASE SCOPED CREDENTIAL cred_bhar\nWITH IDENTITY = 'Managed Identity'\n\nCREATE EXTERNAL DATA SOURCE source_silver\nWITH\n(\n    LOCATION = 'https://adwrsdatalake.dfs.core.windows.net/silver',\n    CREDENTIAL = cred_bhar\n)\n\nCREATE EXTERNAL DATA SOURCE source_gold\nWITH\n(\n    LOCATION = 'https://adwrsdatalake.dfs.core.windows.net/gold',\n    CREDENTIAL = cred_bhar\n)\n\n\n\n\n--Create an external file format for PARQUET files.\nCREATE EXTERNAL FILE FORMAT parquet\nWITH (\n         FORMAT_TYPE = PARQUET , \n         DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'\n    )",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "adwrs_db",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
