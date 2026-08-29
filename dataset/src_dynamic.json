@@ -1,0 +1,31 @@
+{
+	"name": "src_dynamic",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Httplinked service",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"src_rltv_url": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().src_rltv_url",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

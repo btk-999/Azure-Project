@@ -1,0 +1,15 @@
+{
+	"name": "adwrsdf",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f1d896fe-20e8-43d9-9a36-dc061aaafa70",
+		"tenantId": "349e9d5d-7396-4844-ae69-28c55be1597e"
+	}
+}

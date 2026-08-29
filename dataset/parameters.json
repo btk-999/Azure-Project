@@ -1,0 +1,33 @@
+{
+	"name": "parameters",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "src.json",
+				"fileSystem": "parameters"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"src_rltv_url": {
+					"type": "string"
+				},
+				"tgt_folder": {
+					"type": "string"
+				},
+				"tgt_file": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
